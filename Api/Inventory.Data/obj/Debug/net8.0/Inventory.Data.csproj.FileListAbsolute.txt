@@ -1,0 +1,17 @@
+C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Data\bin\Debug\net8.0\Inventory.Data.deps.json
+C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Data\bin\Debug\net8.0\Inventory.Data.runtimeconfig.json
+C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Data\bin\Debug\net8.0\Inventory.Data.dll
+C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Data\bin\Debug\net8.0\Inventory.Data.pdb
+C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Data\bin\Debug\net8.0\Inventory.Models.dll
+C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Data\bin\Debug\net8.0\Inventory.Models.pdb
+C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Data\obj\Debug\net8.0\Inventory.Data.csproj.AssemblyReference.cache
+C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Data\obj\Debug\net8.0\Inventory.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Data\obj\Debug\net8.0\Inventory.Data.AssemblyInfoInputs.cache
+C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Data\obj\Debug\net8.0\Inventory.Data.AssemblyInfo.cs
+C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Data\obj\Debug\net8.0\Inventory.Data.csproj.CoreCompileInputs.cache
+C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Data\obj\Debug\net8.0\Inventor.6961EC15.Up2Date
+C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Data\obj\Debug\net8.0\Inventory.Data.dll
+C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Data\obj\Debug\net8.0\refint\Inventory.Data.dll
+C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Data\obj\Debug\net8.0\Inventory.Data.pdb
+C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Data\obj\Debug\net8.0\Inventory.Data.genruntimeconfig.cache
+C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Data\obj\Debug\net8.0\ref\Inventory.Data.dll
