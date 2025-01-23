@@ -2,6 +2,7 @@
 using Inventory.Data.Reponsitories.Implements;
 using Inventory.Models.Dto;
 using Inventory.Models.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,6 +10,7 @@ namespace Inventory.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    
     public class StorageLocationsController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -29,7 +31,7 @@ namespace Inventory.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateWarehouse([FromBody] StorageLocationsRequestDto request)
+        public async Task<IActionResult> Create([FromBody] StorageLocationsRequestDto request)
         {
             var warehouse = _mapper.Map<StorageLocations>(request);
             await _unitOfWork.storageLocationsRepository.CreateAsync(warehouse);
@@ -51,6 +53,7 @@ namespace Inventory.Api.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "Writer")]
         public async Task<IActionResult> Update(int id, [FromBody] StorageLocationsRequestDto request)
         {
             var obj = _mapper.Map<StorageLocations>(request);
@@ -67,6 +70,7 @@ namespace Inventory.Api.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Writer")]
         public async Task<IActionResult> Delete(int id)
         {
             var warehouse = await _unitOfWork.storageLocationsRepository.DeleteAsync(id);

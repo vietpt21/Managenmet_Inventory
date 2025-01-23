@@ -5,6 +5,7 @@ C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Mod
 C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Models\obj\Debug\net8.0\Inventory.Models.AssemblyInfoInputs.cache
 C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Models\obj\Debug\net8.0\Inventory.Models.AssemblyInfo.cs
 C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Models\obj\Debug\net8.0\Inventory.Models.csproj.CoreCompileInputs.cache
+C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Models\obj\Debug\net8.0\Inventory.Models.sourcelink.json
 C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Models\obj\Debug\net8.0\Inventory.Models.dll
 C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Models\obj\Debug\net8.0\refint\Inventory.Models.dll
 C:\Users\VIETPT\Desktop\Inventory_Web_Api\Managenmet_Inventory\Api\Inventory.Models\obj\Debug\net8.0\Inventory.Models.pdb

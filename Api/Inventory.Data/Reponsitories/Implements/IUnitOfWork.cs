@@ -9,5 +9,7 @@ namespace Inventory.Data.Reponsitories.Implements
     public interface IUnitOfWork
     {
         IStorageLocationsRepository storageLocationsRepository { get; }
+        IProductRepository productRepository { get; }
+        IInventoryRepository inventoryRepository { get; }
     }
 }

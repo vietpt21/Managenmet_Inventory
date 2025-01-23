@@ -1,4 +1,5 @@
-﻿using Inventory.Models.Model;
+﻿using Inventory.Models.Domain;
+using Inventory.Models.Model;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,5 +15,8 @@ namespace Inventory.Data.Data
         {
         }
         public DbSet<StorageLocations> storageLocations { get; set; }
+        public DbSet<Product> products { get; set; }
+        public DbSet<Inventories> inventory { get; set; }
+    
     }
 }

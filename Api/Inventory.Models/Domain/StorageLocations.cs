@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Inventory.Models.Domain;
 
 namespace Inventory.Models.Model
 {
@@ -23,6 +24,8 @@ namespace Inventory.Models.Model
         [Required]
         [Column("note")]
         public string Note { get; set; }
-        
+      
+
+
     }
 }

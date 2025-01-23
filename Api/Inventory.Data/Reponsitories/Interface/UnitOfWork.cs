@@ -13,11 +13,15 @@ namespace Inventory.Data.Reponsitories.Interface
         private readonly ApplicationDbContext _db;
         public IStorageLocationsRepository storageLocationsRepository { get; private set; }
 
-
+        public IProductRepository productRepository { get; private set; }
+        public IInventoryRepository inventoryRepository { get; private set; }
         public UnitOfWork(ApplicationDbContext db)
         {
             _db = db;
             storageLocationsRepository = new StorageLocationsRepository(_db);
+            productRepository = new ProductRepository(_db);
+            inventoryRepository = new InventoryRepository(_db);
+
         }
     }
 }
