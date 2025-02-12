@@ -1,0 +1,175 @@
+<div class="container ">
+  <h1 class="mt-3">Product List</h1>
+  <div class="d-flex justify-content-end mt-3">
+    <a (click)="onAdd()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProductModal">Add Product</a>
+  </div>
+  <ng-container *ngIf="product$ | async as products">
+    <table class="table table-bordered mt-3">
+      <thead>
+      <tr>
+
+        <th>Name</th>
+        <th>Category</th>
+        <th>Device Type</th>
+        <th>Create At</th>
+        <th>location Name</th>
+        <th>Edit</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{product.productName}}</td>
+        <td>{{product.category}}</td>
+        <td>{{product.deviceType}}</td>
+        <td>{{product.createdAt}}</td>
+        <td>
+           {{product.storageLocations.locationName}}
+        </td>
+        <td>
+          <button class="btn btn-warning me-2 "  (click)="onEdit(product.productId)" data-bs-toggle="modal" data-bs-target="#updateProductModal">Update</button>
+          <button class="btn btn-danger" (click)="onDelete(product.productId)" >Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </ng-container>
+
+  <!--Add Modal -->
+  <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addProductModalLabel">Add New Product</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form #form="ngForm" (ngSubmit)="onFormSubmit()">
+            <div class="mb-3">
+              <label for="productNameAdd" class="form-label">Product Name</label>
+              <input
+                type="text"
+                id="productNameAdd"
+                class="form-control"
+                [(ngModel)]="modelAdd.productName"
+                name="productNameAdd"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="categoryAdd" class="form-label">category</label>
+              <input
+                type="text"
+                id="categoryAdd"
+                class="form-control"
+                [(ngModel)]="modelAdd.category"
+                name="categoryAdd"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="deviceTypeAdd" class="form-label">deviceType</label>
+              <input
+                type="text"
+                id="deviceTypeAdd"
+                class="form-control"
+                [(ngModel)]="modelAdd.deviceType"
+                name="deviceTypeAdd"
+                required
+              />
+            </div>
+            <div class="mt-3">
+              <label for="locationIdAdd" class="form-label">Location</label>
+              <ng-container *ngIf="storageLocation$ | async as storageLocations">
+                <select
+                  class="form-control"
+                  [(ngModel)]="modelAdd.locationId"
+                  name="locationIdAdd"
+                  id="locationIdAdd">
+                  <option
+                    *ngFor="let location of storageLocations"
+                    [value]="location.locationId">
+                    {{ location.locationName }}
+                  </option>
+                </select>
+              </ng-container>
+
+            </div>
+
+            <button type="submit" class="btn btn-success">Save</button>
+            <button type="button" class="btn btn-secondary ms-2" (click)="cancelAdd()" data-bs-dismiss="modal">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Update Modal -->
+  <div class="modal fade" id="updateProductModal" tabindex="-1" aria-labelledby="updateProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="updateProductModalLabel">Update Product</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <ng-container *ngIf="product;">
+          <div class="modal-body">
+            <form #form="ngForm" (ngSubmit)="onUpdateSubmit()">
+              <div class="mb-3">
+                <div class="mb-3">
+                  <label class="form-label" for="productId" >Id</label>
+                  <input type="text" id="productId" class="form-control"
+                         name="wareName" value="{{product.productId}}" >
+                </div>
+
+              </div>
+              <div class="mb-3">
+                <label for="productName" class="form-label">Product Name</label>
+                <input
+                  type="text"
+                  id="productName"
+                  class="form-control"
+                  [(ngModel)]="product.productName"
+                  name="productName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="category" class="form-label">Storage Location Name</label>
+                <input
+                  type="text"
+                  id="category"
+                  class="form-control"
+                  [(ngModel)]="product.category"
+                  name="category"
+                  required
+                />
+              </div>
+              <div class="mt-3">
+                <label for="locationId" class="form-label">Storage Location</label>
+                <select
+                  class="form-control"
+                  [(ngModel)]="product.locationId"
+                  name="locationId"
+                  id="locationId"
+                  required>
+                  <option
+                    *ngFor="let location of storageLocations"
+                    [value]="location.locationId"
+                    [selected]="location.locationId === product.locationId">
+                    {{ location.locationName }}
+                  </option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-success">Save</button>
+              <button type="button" class="btn btn-secondary ms-2" (click)="cancelAdd()" data-bs-dismiss="modal">Cancel</button>
+            </form>
+          </div>
+
+        </ng-container>
+      </div>
+    </div>
+  </div>
+
+
+</div>

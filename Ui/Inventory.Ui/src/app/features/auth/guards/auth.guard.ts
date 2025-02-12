@@ -10,7 +10,6 @@ export const authGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
   const user = authService.getUser();
 
-  // Check for the JWT Token
   let token = cookieService.get('Authorization');
 
   if (token && user) {

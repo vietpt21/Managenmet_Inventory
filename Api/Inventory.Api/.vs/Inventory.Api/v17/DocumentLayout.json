@@ -3,38 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EB59A8F9-C6F3-4429-801A-06154A846E96}|..\\Inventory.Models\\Inventory.Models.csproj|c:\\users\\vietpt\\desktop\\inventory_web_api\\managenmet_inventory\\api\\inventory.models\\domain\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0C7CF71-4F92-42B4-9E9C-7C6F6C1312C3}|..\\Inventory.Data\\Inventory.Data.csproj|c:\\users\\vietpt\\desktop\\inventory_web_api\\managenmet_inventory\\api\\inventory.data\\reponsitories\\interface\\inventoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB59A8F9-C6F3-4429-801A-06154A846E96}|..\\Inventory.Models\\Inventory.Models.csproj|c:\\users\\vietpt\\desktop\\inventory_web_api\\managenmet_inventory\\api\\inventory.models\\domain\\inventories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Data\\Migrations\\20250122082436_AddModelToDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{893007F0-5386-467E-A998-3A38A3EC4A81}|Inventory.Api.csproj|c:\\users\\vietpt\\desktop\\inventory_web_api\\managenmet_inventory\\api\\inventory.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{893007F0-5386-467E-A998-3A38A3EC4A81}|Inventory.Api.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{893007F0-5386-467E-A998-3A38A3EC4A81}|Inventory.Api.csproj|c:\\users\\vietpt\\desktop\\inventory_web_api\\managenmet_inventory\\api\\inventory.api\\controllers\\inventorysummarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{893007F0-5386-467E-A998-3A38A3EC4A81}|Inventory.Api.csproj|solutionrelative:controllers\\inventorysummarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB59A8F9-C6F3-4429-801A-06154A846E96}|..\\Inventory.Models\\Inventory.Models.csproj|c:\\users\\vietpt\\desktop\\inventory_web_api\\managenmet_inventory\\api\\inventory.models\\dto\\inventorysummarydetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB59A8F9-C6F3-4429-801A-06154A846E96}|..\\Inventory.Models\\Inventory.Models.csproj|c:\\users\\vietpt\\desktop\\inventory_web_api\\managenmet_inventory\\api\\inventory.models\\dto\\inventorysummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB59A8F9-C6F3-4429-801A-06154A846E96}|..\\Inventory.Models\\Inventory.Models.csproj|c:\\users\\vietpt\\desktop\\inventory_web_api\\managenmet_inventory\\api\\inventory.models\\dto\\inventoriesrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{893007F0-5386-467E-A998-3A38A3EC4A81}|Inventory.Api.csproj|c:\\users\\vietpt\\desktop\\inventory_web_api\\managenmet_inventory\\api\\inventory.api\\controllers\\inventoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{893007F0-5386-467E-A998-3A38A3EC4A81}|Inventory.Api.csproj|solutionrelative:controllers\\inventoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{893007F0-5386-467E-A998-3A38A3EC4A81}|Inventory.Api.csproj|c:\\users\\vietpt\\desktop\\inventory_web_api\\managenmet_inventory\\api\\inventory.api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{893007F0-5386-467E-A998-3A38A3EC4A81}|Inventory.Api.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{893007F0-5386-467E-A998-3A38A3EC4A81}|Inventory.Api.csproj|c:\\users\\vietpt\\desktop\\inventory_web_api\\managenmet_inventory\\api\\inventory.api\\controllers\\inventoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{893007F0-5386-467E-A998-3A38A3EC4A81}|Inventory.Api.csproj|solutionrelative:controllers\\inventoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0C7CF71-4F92-42B4-9E9C-7C6F6C1312C3}|..\\Inventory.Data\\Inventory.Data.csproj|c:\\users\\vietpt\\desktop\\inventory_web_api\\managenmet_inventory\\api\\inventory.data\\reponsitories\\interface\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -49,131 +29,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Models\\Domain\\Product.cs",
-              "RelativeDocumentMoniker": "..\\Inventory.Models\\Domain\\Product.cs",
-              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Models\\Domain\\Product.cs",
-              "RelativeToolTip": "..\\Inventory.Models\\Domain\\Product.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAA3wCQAAAAAAAAA",
+              "Title": "InventoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Data\\Reponsitories\\Interface\\InventoryRepository.cs",
+              "RelativeDocumentMoniker": "..\\Inventory.Data\\Reponsitories\\Interface\\InventoryRepository.cs",
+              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Data\\Reponsitories\\Interface\\InventoryRepository.cs",
+              "RelativeToolTip": "..\\Inventory.Data\\Reponsitories\\Interface\\InventoryRepository.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAA1wCEAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T08:32:43.397Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Inventories.cs",
-              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Models\\Domain\\Inventories.cs",
-              "RelativeDocumentMoniker": "..\\Inventory.Models\\Domain\\Inventories.cs",
-              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Models\\Domain\\Inventories.cs",
-              "RelativeToolTip": "..\\Inventory.Models\\Domain\\Inventories.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAYwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T08:32:29.426Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20250122082436_AddModelToDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Data\\Migrations\\20250122082436_AddModelToDbContext.cs",
-              "RelativeDocumentMoniker": "..\\Inventory.Data\\Migrations\\20250122082436_AddModelToDbContext.cs",
-              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Data\\Migrations\\20250122082436_AddModelToDbContext.cs",
-              "RelativeToolTip": "..\\Inventory.Data\\Migrations\\20250122082436_AddModelToDbContext.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T08:24:36.5Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "InventorySummaryDetail.cs",
-              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Models\\Dto\\InventorySummaryDetail.cs",
-              "RelativeDocumentMoniker": "..\\Inventory.Models\\Dto\\InventorySummaryDetail.cs",
-              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Models\\Dto\\InventorySummaryDetail.cs",
-              "RelativeToolTip": "..\\Inventory.Models\\Dto\\InventorySummaryDetail.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T08:02:53.854Z",
+              "WhenOpened": "2025-02-11T09:12:27.869Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Api\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-22T07:44:41.214Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "InventorySummaryController.cs",
-              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Api\\Controllers\\InventorySummaryController.cs",
-              "RelativeDocumentMoniker": "Controllers\\InventorySummaryController.cs",
-              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Api\\Controllers\\InventorySummaryController.cs",
-              "RelativeToolTip": "Controllers\\InventorySummaryController.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAAwBQAAAARAAAA",
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Data\\Reponsitories\\Interface\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "..\\Inventory.Data\\Reponsitories\\Interface\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Data\\Reponsitories\\Interface\\ProductRepository.cs",
+              "RelativeToolTip": "..\\Inventory.Data\\Reponsitories\\Interface\\ProductRepository.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAYwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T07:21:38.76Z",
+              "WhenOpened": "2025-02-11T09:12:19.748Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "InventorySummary.cs",
-              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Models\\Dto\\InventorySummary.cs",
-              "RelativeDocumentMoniker": "..\\Inventory.Models\\Dto\\InventorySummary.cs",
-              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Models\\Dto\\InventorySummary.cs",
-              "RelativeToolTip": "..\\Inventory.Models\\Dto\\InventorySummary.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAxwA8AAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T07:10:36.089Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Api\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
               "ToolTip": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Api\\Controllers\\ProductController.cs",
               "RelativeToolTip": "Controllers\\ProductController.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAYwDYAAAAJAAAA",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAowGYAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T06:54:59.136Z",
+              "WhenOpened": "2025-02-11T09:01:40.835Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "InventoriesRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Models\\Dto\\InventoriesRequestDto.cs",
-              "RelativeDocumentMoniker": "..\\Inventory.Models\\Dto\\InventoriesRequestDto.cs",
-              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Models\\Dto\\InventoriesRequestDto.cs",
-              "RelativeToolTip": "..\\Inventory.Models\\Dto\\InventoriesRequestDto.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T06:53:30.32Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "InventoriesController.cs",
               "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Api\\Controllers\\InventoriesController.cs",
               "RelativeDocumentMoniker": "Controllers\\InventoriesController.cs",
               "ToolTip": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Api\\Controllers\\InventoriesController.cs",
               "RelativeToolTip": "Controllers\\InventoriesController.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAuwCgAAABCAAAA",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAAAGQAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T06:52:45.817Z",
+              "WhenOpened": "2025-02-11T03:03:20.683Z",
               "EditorCaption": ""
             }
           ]

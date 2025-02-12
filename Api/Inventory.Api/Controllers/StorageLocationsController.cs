@@ -53,7 +53,7 @@ namespace Inventory.Api.Controllers
         }
 
         [HttpPut("{id}")]
-        [Authorize(Roles = "Writer")]
+      /*  [Authorize(Roles = "Writer")]*/
         public async Task<IActionResult> Update(int id, [FromBody] StorageLocationsRequestDto request)
         {
             var obj = _mapper.Map<StorageLocations>(request);
@@ -70,7 +70,7 @@ namespace Inventory.Api.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Writer")]
+     /*   [Authorize(Roles = "Writer")]*/
         public async Task<IActionResult> Delete(int id)
         {
             var warehouse = await _unitOfWork.storageLocationsRepository.DeleteAsync(id);

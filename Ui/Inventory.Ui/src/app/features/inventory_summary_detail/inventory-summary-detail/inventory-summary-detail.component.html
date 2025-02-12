@@ -1,0 +1,53 @@
+<div class="container">
+  <h3>Inventory Summary</h3>
+  <div class="row">
+    <div class="filter-section">
+      <label for="startDate">Từ ngày:</label>
+      <input type="date" id="startDate" [(ngModel)]="startDate">
+
+      <label for="endDate">Đến ngày:</label>
+      <input type="date" id="endDate" [(ngModel)]="endDate">
+      <div class="col-md-4 d-flex align-items-end">
+        <button class="btn btn-primary w-100" (click)="loadSummary()">Search</button>
+      </div>
+    </div>
+
+  </div>
+
+  <table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>STT</th>
+      <th>Product Name</th>
+      <th>Category</th>
+      <th>Device Type</th>
+      <th>Specific Location</th>
+      <th>Beginning Stock (New)</th>
+      <th>Beginning Stock (Old)</th>
+      <th>Import During Period (New)</th>
+      <th>Import During Period (Old)</th>
+      <th>Export During Period (New)</th>
+      <th>Export During Period (Old)</th>
+      <th>Ending Stock (New)</th>
+      <th>Ending Stock (Old)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let detail of summaryDetails">
+      <td>{{ detail.stt }}</td>
+      <td>{{ detail.productName }}</td>
+      <td>{{ detail.category }}</td>
+      <td>{{ detail.deviceType }}</td>
+      <td>{{ detail.specificLocation }}</td>
+      <td>{{ detail.beginningStockNew }}</td>
+      <td>{{ detail.beginningStockOld }}</td>
+      <td>{{ detail.importDuringPeriodNew }}</td>
+      <td>{{ detail.importDuringPeriodOld }}</td>
+      <td>{{ detail.exportDuringPeriodNew }}</td>
+      <td>{{ detail.exportDuringPeriodOld }}</td>
+      <td>{{ detail.endingStockNew }}</td>
+      <td>{{ detail.endingStockOld }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

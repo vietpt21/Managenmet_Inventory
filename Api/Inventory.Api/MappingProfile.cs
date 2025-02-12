@@ -13,7 +13,7 @@ namespace Inventory.Api
             CreateMap<StorageLocationsRequestDto, StorageLocations>();
 
             CreateMap<Product, ProductDto>()
-            .ForMember(dest => dest.StorageLocations, opt => opt.MapFrom(src => src.StorageLocations));
+             .ForMember(dest => dest.StorageLocations, opt => opt.MapFrom(src => src.StorageLocations));
             CreateMap<ProductRequestDto, Product>();
 
             CreateMap<Inventories, InventoriesDto>()

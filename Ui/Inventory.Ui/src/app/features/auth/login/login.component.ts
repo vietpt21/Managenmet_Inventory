@@ -23,20 +23,15 @@ export class LoginComponent {
     this.authService.login(this.model)
       .subscribe({
         next: (response) => {
-          console.log('Logged in response:', response);
-
-          // Set Auth Cookie
           this.cookieService.set('Authorization', `Bearer ${response.token}`,
             undefined, '/', undefined, true, 'Strict');
-
-          // Set User
           this.authService.setUser({
             email: response.email,
             roles: response.roles
           });
-
-          // Redirect back to Home
+          console.log(this.authService.setUser)
           this.router.navigateByUrl('/');
+
         }
       });
   }

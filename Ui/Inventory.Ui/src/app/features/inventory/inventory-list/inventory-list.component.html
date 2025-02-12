@@ -1,0 +1,172 @@
+<div class="container">
+  <h1 class="mt-3">Inventory List</h1>
+  <div class="d-flex justify-content-end mt-3">
+    <button (click)="onAdd()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addInventoryModal">Add Inventory</button>
+  </div>
+  <ng-container *ngIf="inventory$ | async as inventories">
+    <table class="table table-bordered mt-3">
+      <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Type</th>
+        <th>Condition</th>
+        <th>Transaction Date</th>
+        <th>quantity</th>
+        <th>Edit</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let inventory of inventories">
+        <td>
+          {{inventory.product.productName}}
+        </td>
+        <td>{{inventory.type}}</td>
+        <td>{{inventory.condition}}</td>
+        <td>{{inventory.transactionDate}}</td>
+        <td>{{inventory.quantity}}</td>
+        <td>
+          <button class="btn btn-warning me-2 " (click)="onEdit(inventory.inventoryId)" data-bs-toggle="modal" data-bs-target="#updateInventoryModal">Update</button>
+          <button class="btn btn-danger" (click)="onDelete(inventory.inventoryId)" >Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </ng-container>
+  <!--Add -->
+  <div class="modal fade" id="addInventoryModal" tabindex="-1" aria-labelledby="addInventoryModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addInventoryModalLabel">Add New Inventory</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form #form="ngForm" (ngSubmit)="onFormSubmit()">
+            <label for="typeSelect" class="form-label">Type</label>
+            <select
+              id="typeSelect"
+              class="form-control"
+              [(ngModel)]="modelAdd.type"
+              name="typeSelect"
+              required>
+              <option value="import">Import</option>
+              <option value="export">Export</option>
+            </select>
+            <div class="mb-3">
+              <label for="conditionSelect" class="form-label">Condition</label>
+              <select
+                id="conditionSelect"
+                class="form-control"
+                [(ngModel)]="modelAdd.condition"
+                name="conditionSelect"
+                required>
+                <option value="new">New</option>
+                <option value="old">Old</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="quantityAdd" class="form-label">Quantity</label>
+              <input
+                type="number"
+                id="quantityAdd"
+                class="form-control"
+                [(ngModel)]="modelAdd.quantity"
+                name="quantityAdd"
+                required
+              />
+            </div>
+            <div class="mt-3">
+              <label for="productIdAdd" class="form-label">Name Product</label>
+              <ng-container *ngIf="product$ | async as products">
+                <select
+                  class="form-control"
+                  [(ngModel)]="modelAdd.productId"
+                  name="productIdAdd"
+                  id="productIdAdd">
+                  <option
+                    *ngFor="let product of products"
+                    [value]="product.productId">
+                    {{ product.productName }}
+                  </option>
+                </select>
+              </ng-container>
+            </div>
+            <button type="submit" class="btn btn-success">Save</button>
+            <button type="button" class="btn btn-secondary ms-2" (click)="cancelAdd()" data-bs-dismiss="modal">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Update-->
+  <div class="modal fade" id="updateInventoryModal" tabindex="-1" aria-labelledby="updateInventoryModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="updateInventoryModalLabel">Update Product</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <ng-container *ngIf="inventory;">
+          <div class="modal-body">
+            <form #form="ngForm" (ngSubmit)="onUpdateSubmit()">
+              <div class="mb-3">
+                <label for="typeSelect" class="form-label">Type</label>
+                <select
+                  id="typeSelectEdit"
+                  class="form-control"
+                  [(ngModel)]="inventory.type"
+                  name="typeSelectEdit"
+                  required>
+                  <option value="import">Import</option>
+                  <option value="export">Export</option>
+                </select>
+                <div class="mb-3">
+                  <label for="conditionSelectEdit" class="form-label">Condition</label>
+                  <select
+                    id="conditionSelectEdit"
+                    class="form-control"
+                    [(ngModel)]="inventory.condition"
+                    name="conditionSelectEdit"
+                    required>
+                    <option value="new">New</option>
+                    <option value="old">Old</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="quantityEdit" class="form-label">Quantity</label>
+                  <input
+                    type="number"
+                    id="quantityEdit"
+                    class="form-control"
+                    [(ngModel)]="inventory.quantity"
+                    name="quantityAdd"
+                    required
+                  />
+                </div>
+                <div class="mt-3">
+                  <label for="productIdEdit" class="form-label">Product name</label>
+                  <select
+                    class="form-control"
+                    [(ngModel)]="inventory.productId"
+                    name="productIdEdit"
+                    id="productIdEdit"
+                    required>
+                    <option
+                      *ngFor="let product of products"
+                      [value]="product.productId"
+                      [selected]="product.productId === product.locationId">
+                      {{ product.productName }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-success">Save</button>
+              <button type="button" class="btn btn-secondary ms-2" (click)="cancelAdd()" data-bs-dismiss="modal">Cancel</button>
+            </form>
+          </div>
+
+        </ng-container>
+      </div>
+
+  </div>
+</div>

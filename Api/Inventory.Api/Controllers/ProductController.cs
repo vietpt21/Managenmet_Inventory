@@ -100,7 +100,7 @@ namespace Inventory.Api.Controllers
                 return NotFound("Product not found.");
             }
             var response = _mapper.Map<ProductDto>(product);
-            return Ok("Product deleted successfully.");
+            return Ok(response);
         }
 
 

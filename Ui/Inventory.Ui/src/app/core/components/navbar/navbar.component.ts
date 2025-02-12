@@ -20,13 +20,12 @@ export class NavbarComponent implements OnInit{
     this.authService.user()
       .subscribe({
         next: (response) => {
-
           this.user = response;
-          console.log('User in Navbar:', this.user);
         }
       });
 
     this.user = this.authService.getUser();
+    console.log(this.user)
 
   }
   onLogout():void{

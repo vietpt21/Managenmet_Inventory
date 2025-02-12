@@ -1,0 +1,35 @@
+<div class="container">
+  <ng-container *ngIf="inventorySummary$ | async as inventorySummaries">
+    <table class="table table-bordered mt-3">
+      <thead>
+      <tr>
+        <th>Product Id</th>
+        <th>Product Name</th>
+        <th>location Name</th>
+        <th>Specific Location</th>
+        <th>Total Import New</th>
+        <th>total Import Old</th>
+        <th>total Export New</th>
+        <th>total Export Old</th>
+        <th>final Stock New</th>
+        <th>final Stock Old</th>
+
+      </thead>
+      <tbody>
+      <tr *ngFor="let inventorySummary of inventorySummaries">
+        <td>{{inventorySummary.productId}}</td>
+        <td>{{inventorySummary.productName}}</td>
+        <td>{{inventorySummary.locationName}}</td>
+        <td>{{inventorySummary.specificLocation}}</td>
+        <td>{{inventorySummary.totalImportNew}}</td>
+        <td>{{inventorySummary.totalImportOld}}</td>
+        <td>{{inventorySummary.totalExportNew}}</td>
+        <td>{{inventorySummary.totalExportOld}}</td>
+        <td>{{inventorySummary.finalStockNew}}</td>
+        <td>{{inventorySummary.finalStockOld}}</td>
+
+      </tr>
+      </tbody>
+    </table>
+  </ng-container>
+</div>

@@ -43,7 +43,6 @@ export class StorageLocationsListComponent implements  OnInit{
   }
   onEdit(locationId: number): void {
     this.id = locationId;
-
     this.storageLocationService.getById(locationId).subscribe({
       next: (data) => {
         this.storageLocation = data;
@@ -75,22 +74,20 @@ export class StorageLocationsListComponent implements  OnInit{
   onFormSubmitUpdate(): void {
 
     const editStorageLocationRequest: EditStorageLocationRequest = {
-      locationName: this.storageLocation?.locationName ?? '', // Nếu locationName null hoặc undefined, đặt giá trị rỗng
+      locationName: this.storageLocation?.locationName ?? '',
       specificLocation: this.storageLocation?.specificLocation ?? '',
       note: this.storageLocation?.note ?? '',
     };
-
-
     if (this.id) {
       this.editStorageLocationSubscription = this.storageLocationService
-        .update(editStorageLocationRequest, this.id) // Gửi request cập nhật với ID và dữ liệu
+        .update(editStorageLocationRequest, this.id)
         .subscribe({
           next: () => {
             this.loadData();
             this.closeModal();
           },
           error: (err) => {
-            console.error('Error updating storage location:', err); // Xử lý lỗi nếu có
+            console.error('Error updating storage location:', err);
           },
         });
     }

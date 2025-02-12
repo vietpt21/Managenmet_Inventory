@@ -58,7 +58,7 @@ namespace Inventory.Api.Controllers
             var inventory = await _unitOfWork.inventoryRepository.GetByIdAsync(id);
             if (inventory == null)
             {
-                return NotFound("Product not found.");
+                return NotFound("Inventory not found.");
             }
             var response = _mapper.Map<InventoriesDto>(inventory);
 
@@ -99,7 +99,7 @@ namespace Inventory.Api.Controllers
                 return NotFound("Product not found.");
             }
             var response = _mapper.Map<InventoriesDto>(inventory);
-            return Ok("Product deleted successfully.");
+            return Ok(new { message = "Product deleted successfully.", data = response });
         }
 
     }

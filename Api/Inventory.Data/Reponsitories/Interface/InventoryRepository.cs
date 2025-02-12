@@ -28,7 +28,7 @@ namespace Inventory.Data.Reponsitories.Interface
 
         public async Task<Inventories?> DeleteAsync(int id)
         {
-            var existing= await dbContext.inventory.FirstOrDefaultAsync(x => x.ProductId == id);
+            var existing= await dbContext.inventory.FirstOrDefaultAsync(x => x.InventoryId == id);
 
             if (existing != null)
             {
@@ -47,7 +47,7 @@ namespace Inventory.Data.Reponsitories.Interface
 
         public async Task<Inventories?> GetByIdAsync(int id)
         {
-            return await dbContext.inventory.Include(x => x.Product).FirstOrDefaultAsync(x => x.ProductId == id);
+            return await dbContext.inventory.Include(x => x.Product).FirstOrDefaultAsync(x => x.InventoryId == id);
         }
 
         public async Task<Inventories?> UpdateAsync(Inventories obj)
