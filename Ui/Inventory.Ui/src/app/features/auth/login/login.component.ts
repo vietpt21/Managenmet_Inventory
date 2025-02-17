@@ -29,7 +29,7 @@ export class LoginComponent {
             email: response.email,
             roles: response.roles
           });
-          console.log(this.authService.setUser)
+          console.log(this.authService.getUser()?.roles);
           this.router.navigateByUrl('/');
 
         }

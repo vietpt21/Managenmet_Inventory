@@ -1,22 +1,25 @@
 <div class="container">
-  <ng-container *ngIf="inventorySummary$ | async as inventorySummaries">
+  <input type="text" [formControl]="searchControl" placeholder="Tìm kiếm sản phẩm..." class="form-control mb-3" />
+
+  <ng-container *ngIf="filteredInventorySummary$ | async as inventorySummaries">
     <table class="table table-bordered mt-3">
       <thead>
       <tr>
         <th>Product Id</th>
         <th>Product Name</th>
-        <th>location Name</th>
+        <th>Location Name</th>
         <th>Specific Location</th>
         <th>Total Import New</th>
-        <th>total Import Old</th>
-        <th>total Export New</th>
-        <th>total Export Old</th>
-        <th>final Stock New</th>
-        <th>final Stock Old</th>
-
+        <th>Total Import Old</th>
+        <th>Total Export New</th>
+        <th>Total Export Old</th>
+        <th>Final Stock New</th>
+        <th>Final Stock Old</th>
+      </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let inventorySummary of inventorySummaries">
+      <tr *ngFor="let inventorySummary of inventorySummaries"
+          (contextmenu)="onRightClick($event, inventorySummary)">
         <td>{{inventorySummary.productId}}</td>
         <td>{{inventorySummary.productName}}</td>
         <td>{{inventorySummary.locationName}}</td>
@@ -27,9 +30,25 @@
         <td>{{inventorySummary.totalExportOld}}</td>
         <td>{{inventorySummary.finalStockNew}}</td>
         <td>{{inventorySummary.finalStockOld}}</td>
-
       </tr>
       </tbody>
     </table>
+    <div *ngIf="showMenu" class="context-menu" [ngStyle]="{'top.px': menuY, 'left.px': menuX}">
+      <button (click)="addProduct()" class="btn btn-primary btn-sm">Thêm Sản Phẩm</button>
+    </div>
   </ng-container>
+  <ng-template #productModal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Thêm Sản Phẩm</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <app-product-add (productAdded)="refreshInventorySummary()"></app-product-add>
+    </div>
+  </ng-template>
+
 </div>
+
+

@@ -62,7 +62,7 @@ namespace Inventory.Api.Controllers
             var user = new IdentityUser
             {
                 UserName = request.Email?.Trim(),
-                Email = request.Email?.Trim()
+                Email = request.Email?.Trim(), 
             };
             var identityResult = await userManager.CreateAsync(user, request.Password);
 

@@ -11,15 +11,17 @@ import {
 import {
   InventorySummaryDetailComponent
 } from "./features/inventory_summary_detail/inventory-summary-detail/inventory-summary-detail.component";
+import {RegisterComponent} from "./features/auth/register/register.component";
 
 
 const routes: Routes = [
-  { path: 'admin/storageLocation', component: StorageLocationsListComponent /*, canActivate: [authGuard]*/},
-  { path: 'admin/product', component: ProductListComponent /*, canActivate: [authGuard]*/},
-  {path:'admin/inventory',component: InventoryListComponent/*, canActivate: [authGuard]*/},
-  {path:'admin/inventorySummary',component: InventorySummaryListComponent/*, canActivate: [authGuard]*/},
-  {path:'admin/inventorySummaryDetail',component: InventorySummaryDetailComponent/*, canActivate: [authGuard]*/},
+  { path: 'admin/storageLocation', component: StorageLocationsListComponent , canActivate: [authGuard]},
+  { path: 'admin/product', component: ProductListComponent , canActivate: [authGuard]},
+  {path:'admin/inventory',component: InventoryListComponent, canActivate: [authGuard]},
+  {path:'admin/inventorySummary',component: InventorySummaryListComponent, canActivate: [authGuard]},
+  {path:'admin/inventorySummaryDetail',component: InventorySummaryDetailComponent, canActivate: [authGuard]},
   {path:'login',component:LoginComponent},
+  {path:'register',component:RegisterComponent},
 
 
 ];

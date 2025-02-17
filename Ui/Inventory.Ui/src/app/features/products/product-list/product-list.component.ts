@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {Observable, Subscription} from "rxjs";
 import {Product} from "../models/product.model";
 import {ProductService} from "../services/product.service";
@@ -6,6 +6,8 @@ import {AddProductRequest} from "../models/add-product-request.model";
 import {StorageLocation} from "../../storageLocations/models/storage-location.model";
 import {StorageLocationService} from "../../storageLocations/services/storage-location.service";
 import {EditProductRequest} from "../models/edit-product-request.model";
+import {InventorySummary} from "../../inventory_summary/models/inventory-summary.model";
+import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-product-list',
@@ -13,6 +15,9 @@ import {EditProductRequest} from "../models/edit-product-request.model";
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit{
+  @ViewChild('addProductModal', { static: false }) addProductModal!: ElementRef;
+  @Input() selectedProduct?: InventorySummary | null;
+
   product$?: Observable<Product[]>;
   modelAdd: AddProductRequest;
   model? :Product;
@@ -108,25 +113,24 @@ export class ProductListComponent implements OnInit{
       })
   }
   showModal(): void {
-    const modal = document.querySelector('.modal');
+    const modal = document.getElementById('addProductModal') as HTMLDivElement;
     if (modal) {
-      modal.setAttribute('aria-hidden', 'false');
-      const focusableElements = modal.querySelectorAll('button, input, a');
-      focusableElements.forEach((element: any) => {
-        element.removeAttribute('tabindex');
-      });
-      const firstFocusableElement = modal.querySelector('button');
-      firstFocusableElement?.focus();
+      modal.style.display = 'block';
+      setTimeout(() => {
+        const firstInput = modal.querySelector('input');
+        firstInput?.focus();
+      }, 0);
     }
   }
   closeModal(): void {
-    const modal = document.querySelector('.modal');
+    const modal = document.getElementById('addProductModal') as HTMLDivElement;
     if (modal) {
-      modal.setAttribute('aria-hidden', 'true');
-      const focusableElements = modal.querySelectorAll('button, input, a');
-      focusableElements.forEach((element: any) => {
-        element.setAttribute('tabindex', '-1');
-      });
+      modal.style.display = 'none'; // Ẩn modal
+      modal.removeAttribute('aria-hidden');
+      const openModalButton = document.querySelector('.open-modal-button') as HTMLButtonElement;
+      if (openModalButton) {
+        openModalButton.focus();
+      }
     }
   }
   cancelAdd(){
