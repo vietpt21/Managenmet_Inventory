@@ -22,24 +22,37 @@ namespace Inventory.Api.Controllers
             _mapper = mapper;
         }
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] ProductRequestDto request)
+        public async Task<IActionResult> Create([FromForm] ProductRequestDto request)
         {
-
             var product = _mapper.Map<Product>(request);
-
-
             var storageLocation = await _unitOfWork.storageLocationsRepository.GetByIdAsync(product.LocationId);
             if (storageLocation != null)
             {
                 product.StorageLocations = storageLocation;
-                await _unitOfWork.productRepository.CreateAsync(product);
             }
             else
             {
                 return BadRequest("Invalid location ID.");
             }
+            if (request.Image != null)
+            {
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");//check tồn tại chưa nếu chưa thi tạo
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);
+                }
+                var fileName = $"{Guid.NewGuid()}_{request.Image.FileName}"; 
+                var filePath = Path.Combine(uploadsFolder, fileName);
 
-           
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await request.Image.CopyToAsync(stream);
+                }
+
+                product.ImageUrl = $"{fileName}"; 
+            }
+            await _unitOfWork.productRepository.CreateAsync(product);
+
             var response = _mapper.Map<ProductDto>(product);
 
             return Ok(response);
@@ -68,7 +81,7 @@ namespace Inventory.Api.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] ProductRequestDto request)
+        public async Task<IActionResult> Update(int id, [FromForm] ProductRequestDto request)
         {
             var product = await _unitOfWork.productRepository.GetByIdAsync(id);
             if (product == null)
@@ -85,20 +98,56 @@ namespace Inventory.Api.Controllers
             {
                 return BadRequest("Invalid location ID.");
             }
+            if (request.Image != null)
+            {
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);
+                }
+                if (!string.IsNullOrEmpty(product.ImageUrl))
+                {
+                    var oldFilePath = Path.Combine(uploadsFolder, product.ImageUrl);
+                    if (System.IO.File.Exists(oldFilePath))
+                    {
+                        System.IO.File.Delete(oldFilePath);
+                    }
+                }
+                var fileName = $"{Guid.NewGuid()}_{request.Image.FileName}";
+                var filePath = Path.Combine(uploadsFolder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await request.Image.CopyToAsync(stream);
+                }
+
+                product.ImageUrl = fileName; 
+            }
             await _unitOfWork.productRepository.UpdateAsync(product);
             var response = _mapper.Map<ProductDto>(product);
 
             return Ok(response);
         }
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromRoute] int id)
+        public async Task<IActionResult> Delete( int id)
         {
 
-            var product = await _unitOfWork.productRepository.DeleteAsync(id);
+            var product = await _unitOfWork.productRepository.GetByIdAsync(id);
             if (product == null)
             {
                 return NotFound("Product not found.");
             }
+            if (!string.IsNullOrEmpty(product.ImageUrl))
+            {
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
+                var filePath = Path.Combine(uploadsFolder, product.ImageUrl);
+
+                if (System.IO.File.Exists(filePath))
+                {
+                    System.IO.File.Delete(filePath); 
+                }
+            }
+            await _unitOfWork.productRepository.DeleteAsync(id);
             var response = _mapper.Map<ProductDto>(product);
             return Ok(response);
         }

@@ -26,7 +26,7 @@ export class ProductListComponent implements OnInit{
   product?: Product;
   id: number | null = null;
   editProductSubscription?: Subscription;
-
+  selectedFile?: File;
   constructor(private productService: ProductService,
               private storageLocationService: StorageLocationService) {
     this.modelAdd = {
@@ -35,6 +35,7 @@ export class ProductListComponent implements OnInit{
       deviceType: '',
       locationId:0 ,
       createdAt: new Date(),
+      image: null,
     }
   }
   ngOnInit(): void {
@@ -43,23 +44,50 @@ export class ProductListComponent implements OnInit{
   loadData(){
     this.product$ = this.productService.getAllProduct();
   }
+  onFileSelected(event: any): void {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files.length > 0) {
+      this.modelAdd.image = input.files[0];
+    }
+  }
+  onFileSelectedEdit(event: any): void {
+    const file = event.target.files[0];
+    if (file) {
+      this.selectedFile = file;
+      this.product!.image = file;
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.product!.imageUrl = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  }
   onFormSubmit():void{
     this.productService.createProduct(this.modelAdd).subscribe({
       next: (response) => {
         this.loadData();
-        this.closeModal();
         this.modelAdd = {
           productName: '',
           category: '',
           deviceType: '',
           locationId:0 ,
           createdAt: new Date(),
-        }
+          image: null,
+        };
+        this.closeModal();
       }
     });
   }
   onAdd():void{
     this.showModal();
+    this.modelAdd= {
+      productName: '',
+      category: '',
+      deviceType: '',
+      createdAt: new Date(),
+      locationId: 0,
+      image:null
+    }
     this.storageLocation$ = this.storageLocationService.getAll();
   }
   onEdit(ProductId: number): void {
@@ -67,6 +95,9 @@ export class ProductListComponent implements OnInit{
     this.productService.getProductById(ProductId).subscribe({
       next: (data) => {
         this.product = data;
+        if (this.product.imageUrl) {
+          this.product.imageUrl = `https://localhost:7068/uploads/${this.product.imageUrl}`;
+        }
         this.storageLocationService.getAll().subscribe({
           next: (response) => {
             this.storageLocations = response;
@@ -89,8 +120,11 @@ export class ProductListComponent implements OnInit{
         category: this.product.category,
         deviceType: this.product.deviceType,
         locationId: this.product.locationId,
-        createdAt: this.product.createdAt ?? new Date(),
+        createdAt: this.product.createdAt ? new Date(this.product.createdAt) : new Date(),
+        image: this.product.image,
       };
+      console.log(this.product);
+
       this.editProductSubscription = this.productService
         .updateProduct(this.id, editProductRequest)
         .subscribe({
@@ -113,29 +147,30 @@ export class ProductListComponent implements OnInit{
       })
   }
   showModal(): void {
-    const modal = document.getElementById('addProductModal') as HTMLDivElement;
+    const modal = document.querySelector('.modal');
     if (modal) {
-      modal.style.display = 'block';
-      setTimeout(() => {
-        const firstInput = modal.querySelector('input');
-        firstInput?.focus();
-      }, 0);
+      modal.setAttribute('aria-hidden', 'false');
+      const focusableElements = modal.querySelectorAll('button, input, a');
+      focusableElements.forEach((element: any) => {
+        element.removeAttribute('tabindex');
+      });
+      const firstFocusableElement = modal.querySelector('button');
+      firstFocusableElement?.focus();
     }
   }
   closeModal(): void {
-    const modal = document.getElementById('addProductModal') as HTMLDivElement;
+    const modal = document.querySelector('.modal');
     if (modal) {
-      modal.style.display = 'none'; // Ẩn modal
-      modal.removeAttribute('aria-hidden');
-      const openModalButton = document.querySelector('.open-modal-button') as HTMLButtonElement;
-      if (openModalButton) {
-        openModalButton.focus();
-      }
+      modal.setAttribute('aria-hidden', 'true');
+      const focusableElements = modal.querySelectorAll('button, input, a');
+      focusableElements.forEach((element: any) => {
+        element.setAttribute('tabindex', '-1');
+      });
     }
   }
   cancelAdd(){
     this.closeModal();
-    this.modelAdd = { productName: '', category: '', deviceType: '',createdAt:new Date(),locationId: 0
+    this.modelAdd = { productName: '', category: '', deviceType: '',createdAt:new Date(),locationId: 0,image:null,
     };
   }
 

@@ -11,5 +11,6 @@ namespace Inventory.Data.Reponsitories.Implements
         IStorageLocationsRepository storageLocationsRepository { get; }
         IProductRepository productRepository { get; }
         IInventoryRepository inventoryRepository { get; }
+       
     }
 }

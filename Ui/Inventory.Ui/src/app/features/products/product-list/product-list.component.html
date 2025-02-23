@@ -77,6 +77,11 @@
                 required
               />
             </div>
+            <div class="mt-3 d-flex align-items-center">
+              <label for="imageUpload" class="me-2">Chọn ảnh:</label>
+              <input type="file" id="imageUpload" (change)="onFileSelected($event)" accept="image/*">
+            </div>
+
             <div class="mt-3">
               <label for="locationIdAdd" class="form-label">Location</label>
               <ng-container *ngIf="storageLocation$ | async as storageLocations">
@@ -132,7 +137,7 @@
                 />
               </div>
               <div class="mb-3">
-                <label for="category" class="form-label">Storage Location Name</label>
+                <label for="category" class="form-label">Category</label>
                 <input
                   type="text"
                   id="category"
@@ -142,6 +147,23 @@
                   required
                 />
               </div>
+              <div class="mb-3">
+                <label for="deviceType" class="form-label">DeviceType</label>
+                <input
+                  type="text"
+                  id="deviceType"
+                  class="form-control"
+                  [(ngModel)]="product.deviceType"
+                  name="deviceType"
+                  required
+                />
+              </div>
+              <div class="mt-3 d-flex">
+                <label for="imageUpload">Chọn ảnh:</label>
+                <input type="file" id="imageUploadEdit" (change)="onFileSelectedEdit($event)" accept="image/*">
+                <img *ngIf="product?.imageUrl" [src]="product.imageUrl" alt="Product Image" width="100">
+              </div>
+
               <div class="mt-3">
                 <label for="locationId" class="form-label">Storage Location</label>
                 <select

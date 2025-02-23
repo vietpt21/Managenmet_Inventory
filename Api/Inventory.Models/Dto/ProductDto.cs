@@ -16,6 +16,7 @@ namespace Inventory.Models.Dto
         public string DeviceType { get; set; }
         public int LocationId { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public string ImageUrl { get; set; }
         public StorageLocationsDto StorageLocations{ get; set; } = new StorageLocationsDto();
     }
 }

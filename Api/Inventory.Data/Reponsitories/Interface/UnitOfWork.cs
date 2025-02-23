@@ -21,6 +21,7 @@ namespace Inventory.Data.Reponsitories.Interface
             storageLocationsRepository = new StorageLocationsRepository(_db);
             productRepository = new ProductRepository(_db);
             inventoryRepository = new InventoryRepository(_db);
+           
 
         }
     }

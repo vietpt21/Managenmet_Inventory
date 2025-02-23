@@ -1,0 +1,61 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Api\\wwwroot\\uploads\\09ced975-8440-492f-b7e9-005dc3367c6f_tivi.jpg",
+      "PackagePath": "staticwebassets\\uploads\\09ced975-8440-492f-b7e9-005dc3367c6f_tivi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Api\\wwwroot\\uploads\\79012086-be95-4077-a5fd-98914ec9f3b6_tivi1.png",
+      "PackagePath": "staticwebassets\\uploads\\79012086-be95-4077-a5fd-98914ec9f3b6_tivi1.png"
+    },
+    {
+      "Id": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Api\\wwwroot\\uploads\\8ecc4710-7660-4982-a11f-f0fbdecc4ffa_iphone-16-pro-titan-tu-nhien.png",
+      "PackagePath": "staticwebassets\\uploads\\8ecc4710-7660-4982-a11f-f0fbdecc4ffa_iphone-16-pro-titan-tu-nhien.png"
+    },
+    {
+      "Id": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Api\\wwwroot\\uploads\\923cb641-adc6-4b14-98b9-8681c3b67929_tivi.jpg",
+      "PackagePath": "staticwebassets\\uploads\\923cb641-adc6-4b14-98b9-8681c3b67929_tivi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Api\\wwwroot\\uploads\\a7505d2b-aa83-40a5-9f22-f1ee3b784856_iphone-16-pro-titan-tu-nhien.png",
+      "PackagePath": "staticwebassets\\uploads\\a7505d2b-aa83-40a5-9f22-f1ee3b784856_iphone-16-pro-titan-tu-nhien.png"
+    },
+    {
+      "Id": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Api\\wwwroot\\uploads\\a9bb83a9-5c9b-40ad-8dd3-3e24a8da4e49_tivi.jpg",
+      "PackagePath": "staticwebassets\\uploads\\a9bb83a9-5c9b-40ad-8dd3-3e24a8da4e49_tivi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Api\\wwwroot\\uploads\\ae104654-0f4d-497f-9099-d3c2918b3961_tivi.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ae104654-0f4d-497f-9099-d3c2918b3961_tivi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Api\\wwwroot\\uploads\\cefc013c-5c37-4675-aea5-f34e679668ea_tivi.jpg",
+      "PackagePath": "staticwebassets\\uploads\\cefc013c-5c37-4675-aea5-f34e679668ea_tivi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Api\\wwwroot\\uploads\\d7ce41a6-ddf2-4631-8545-b4985fc9943e_iphone-16-pro-titan-tu-nhien.png",
+      "PackagePath": "staticwebassets\\uploads\\d7ce41a6-ddf2-4631-8545-b4985fc9943e_iphone-16-pro-titan-tu-nhien.png"
+    },
+    {
+      "Id": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Api\\wwwroot\\uploads\\f164f720-a9df-44aa-a762-68907945e107_tivi.jpg",
+      "PackagePath": "staticwebassets\\uploads\\f164f720-a9df-44aa-a762-68907945e107_tivi.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Inventory.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Inventory.Api.props",
+      "PackagePath": "build\\Inventory.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Inventory.Api.props",
+      "PackagePath": "buildMultiTargeting\\Inventory.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Inventory.Api.props",
+      "PackagePath": "buildTransitive\\Inventory.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

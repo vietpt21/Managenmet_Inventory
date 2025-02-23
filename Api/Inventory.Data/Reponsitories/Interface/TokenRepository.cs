@@ -38,7 +38,7 @@ namespace Inventory.Data.Reponsitories.Interface
                 issuer: configuration["Jwt:Issuer"],
                 audience: configuration["Jwt:Audience"],
                 claims: claims,
-                expires: DateTime.Now.AddMinutes(15),
+                expires: DateTime.Now.AddMinutes(120),
                 signingCredentials: credentials);
             return new JwtSecurityTokenHandler().WriteToken(token);
         }

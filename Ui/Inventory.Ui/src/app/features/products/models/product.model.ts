@@ -8,4 +8,7 @@ export interface Product{
   locationId   :number;
   createdAt   : Date,
   storageLocations: StorageLocation;
+  imageUrl?:string;
+  image:File |null
+
 }

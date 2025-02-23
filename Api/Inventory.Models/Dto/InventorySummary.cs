@@ -18,5 +18,7 @@ namespace Inventory.Models.Dto
         public int TotalExportOld { get; set; }
         public int FinalStockNew { get; set; }
         public int FinalStockOld { get; set; }
+        public string ImageUrl { get; set; }
+        public string DeviceType { get; set; }
     }
 }

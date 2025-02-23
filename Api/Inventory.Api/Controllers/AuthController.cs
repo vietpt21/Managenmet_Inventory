@@ -12,12 +12,15 @@ namespace Inventory.Api.Controllers
     {
         private readonly UserManager<IdentityUser> userManager;
         private readonly ITokenRepository tokenRepository;
-
+        private readonly IEmailRepository emailRepository;
+     
         public AuthController(UserManager<IdentityUser> userManager,
-            ITokenRepository tokenRepository)
+            ITokenRepository tokenRepository,
+            IEmailRepository emailRepository)
         {
             this.userManager = userManager;
             this.tokenRepository = tokenRepository;
+            this.emailRepository = emailRepository;
         }
 
         // POST: {apibaseurl}/api/auth/login
@@ -42,7 +45,8 @@ namespace Inventory.Api.Controllers
                         Roles = roles.ToList(),
                         Token = jwtToken
                     };
-
+                    await emailRepository.SendEmailAsync(identityUser.Email, "Thông báo đăng nhập",
+                    $"<p>Bạn vừa đăng nhập vào hệ thống lúc {DateTime.UtcNow}.</p>");
                     return Ok(response);
                 }
             }
@@ -72,7 +76,10 @@ namespace Inventory.Api.Controllers
 
                 if (identityResult.Succeeded)
                 {
+                    await emailRepository.SendEmailAsync(user.Email, "Chào mừng đến với hệ thống!",
+                    "<h2>Bạn đã đăng ký tài khoản thành công!</h2><p>Hãy đăng nhập để sử dụng dịch vụ.</p>");
                     return Ok();
+
                 }
                 else
                 {
@@ -84,6 +91,9 @@ namespace Inventory.Api.Controllers
                         }
                     }
                 }
+              
+
+                return Ok();
             }
             else
             {

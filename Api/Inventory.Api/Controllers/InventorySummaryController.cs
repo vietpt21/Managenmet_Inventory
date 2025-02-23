@@ -32,6 +32,8 @@ namespace Inventory.Api.Controllers
                 {
                     ProductId = product.ProductId,
                     ProductName = product.ProductName,
+                    DeviceType =product.DeviceType,
+                    ImageUrl= product.ImageUrl,
                     LocationName = product.StorageLocations?.LocationName,
                     SpecificLocation = product.StorageLocations?.SpecificLocation,
                     TotalImportNew = inventories.Where(i => i.Type == "import" && i.Condition == "new").Sum(i => i.Quantity),

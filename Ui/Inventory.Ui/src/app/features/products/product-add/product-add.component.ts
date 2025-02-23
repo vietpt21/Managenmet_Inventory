@@ -25,6 +25,7 @@ export class ProductAddComponent {
       deviceType: '',
       locationId:0 ,
       createdAt: new Date(),
+      image:null,
     }
   }
 
@@ -37,6 +38,8 @@ export class ProductAddComponent {
           deviceType: '',
           locationId:0 ,
           createdAt: new Date(),
+          image:null,
+
         }
       }
     });
@@ -56,7 +59,8 @@ export class ProductAddComponent {
   }
   cancelAdd(){
     this.closeModal();
-    this.modelAdd = { productName: '', category: '', deviceType: '',createdAt:new Date(),locationId: 0
+    this.modelAdd = { productName: '', category: '', deviceType: '',createdAt:new Date(),locationId: 0,image:null,
+
     };
   }
 

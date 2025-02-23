@@ -4,4 +4,5 @@ export interface EditProductRequest{
   deviceType  :string
   locationId   :number;
   createdAt   : Date,
+  image: File | null;
 }

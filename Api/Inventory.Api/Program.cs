@@ -38,6 +38,7 @@ namespace Inventory.Api
                 options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString"));
             });
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            builder.Services.AddScoped<IEmailRepository, EmailRepository>();
             builder.Services.AddScoped<ITokenRepository, TokenRepository>();
             builder.Services.AddAutoMapper(typeof(MappingProfile));
             builder.Services.AddCors(options =>
@@ -88,6 +89,7 @@ namespace Inventory.Api
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            app.UseStaticFiles();
             app.UseCors("AllowAllOrigins");
             app.UseHttpsRedirection();
             app.UseAuthentication();

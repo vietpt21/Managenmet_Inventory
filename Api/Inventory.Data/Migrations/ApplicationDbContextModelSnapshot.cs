@@ -83,6 +83,10 @@ namespace Inventory.Data.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("device_type");
 
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("image_url");
+
                     b.Property<int>("LocationId")
                         .HasColumnType("int")
                         .HasColumnName("location_id");

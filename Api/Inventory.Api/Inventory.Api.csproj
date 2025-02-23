@@ -25,4 +25,8 @@
     <ProjectReference Include="..\Inventory.Models\Inventory.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
 </Project>

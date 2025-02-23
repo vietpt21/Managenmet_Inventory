@@ -12,6 +12,7 @@ import {
   InventorySummaryDetailComponent
 } from "./features/inventory_summary_detail/inventory-summary-detail/inventory-summary-detail.component";
 import {RegisterComponent} from "./features/auth/register/register.component";
+import {HomeListComponent} from "./features/home/home-list/home-list.component";
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path:'admin/inventorySummaryDetail',component: InventorySummaryDetailComponent, canActivate: [authGuard]},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
+  {path:'',component: HomeListComponent}
 
 
 ];

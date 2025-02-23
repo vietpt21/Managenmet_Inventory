@@ -15,6 +15,9 @@ import { InventorySummaryListComponent } from './features/inventory_summary/inve
 import { InventorySummaryDetailComponent } from './features/inventory_summary_detail/inventory-summary-detail/inventory-summary-detail.component';
 import { ProductAddComponent } from './features/products/product-add/product-add.component';
 import { RegisterComponent } from './features/auth/register/register.component';
+import { HomeListComponent } from './features/home/home-list/home-list.component';
+
+
 
 
 
@@ -32,6 +35,8 @@ import { RegisterComponent } from './features/auth/register/register.component';
     InventorySummaryDetailComponent,
     ProductAddComponent,
     RegisterComponent,
+    HomeListComponent,
+
 
 
   ],

@@ -5,6 +5,6 @@ export interface AddProductRequest{
   category  :string;
   deviceType  :string
   locationId   :number;
-  createdAt   : Date,
-
+  createdAt   : Date;
+  image: File | null;
 }

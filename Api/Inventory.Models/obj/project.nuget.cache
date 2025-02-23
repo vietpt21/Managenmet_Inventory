@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "uhAU7iad7Sw=",
+  "dgSpecHash": "0uH0OL1Wiqs=",
   "success": true,
   "projectFilePath": "C:\\Users\\VIETPT\\Desktop\\Inventory_Web_Api\\Managenmet_Inventory\\Api\\Inventory.Models\\Inventory.Models.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\VIETPT\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.3.0\\microsoft.aspnetcore.http.features.2.3.0.nupkg.sha512",
+    "C:\\Users\\VIETPT\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

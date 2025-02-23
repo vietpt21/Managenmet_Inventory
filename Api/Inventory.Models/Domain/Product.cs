@@ -35,7 +35,9 @@ namespace Inventory.Models.Domain
         [Column("created_at")]
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
-        
+        [Column("image_url")]
+        public string? ImageUrl { get; set; }
+
         [ForeignKey(nameof(LocationId))]
         public virtual StorageLocations StorageLocations { get; set; }
 

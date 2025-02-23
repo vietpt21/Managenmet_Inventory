@@ -1,0 +1,43 @@
+<div class="container mt-4">
+  <div class="row">
+    <div id="carouselExampleControls" data-mdb-carousel-init class="carousel slide" data-mdb-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:quality(100)/Group_2085666504_fab80fdc07.png" class="d-block w-100"  alt="Wild Landscape" />
+        </div>
+        <div class="carousel-item">
+          <img src="https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:quality(100)/H1_1440x242_578aa6e296.png" class="d-block w-100" alt="Camera" />
+        </div>
+        <div class="carousel-item">
+          <img src="https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:quality(100)/H1_1440x242_578aa6e296.png" class="d-block w-100" alt="Exotic Fruits" />
+        </div>
+      </div>
+      <button data-mdb-button-init class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleControls" data-mdb-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button data-mdb-button-init class="carousel-control-next" type="button" data-mdb-target="#carouselExampleControls" data-mdb-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="row row-cols-1 row-cols-md-5 g-4">
+      <div class="col" *ngFor="let product of productDetail$ | async">
+        <div class="card h-100 shadow">
+          <img *ngIf="product.imageUrl" [src]="'https://localhost:7068/uploads/' + product.imageUrl" class="card-img-top fixed-img" alt="">
+
+          <div class="card-body">
+            <h5 class="card-title">{{ product.productName }}</h5>
+            <p class="card-text"><strong>Loại thiết bị:</strong> {{ product.deviceType }}</p>
+            <p class="card-text"><strong>:Số lượng tồn mới</strong> {{ product.finalStockNew }}</p>
+            <p class="card-text"><strong>Số lượng tồn :</strong> {{ product.finalStockOld }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
